@@ -7,15 +7,19 @@ def subtract(a, b):
 def mult(a,b):
     return a*b
 
+def div(a,b):
+    return a / b
+
 def main(): 
     print("Simple Calculator") 
     print("1. Addition") 
     print("2. Subtraction") 
     print("3. Multiplication")
+    print("4. Division")
 
-    choice = input("Choose an option (1 ,2 or 3): ") 
+    choice = input("Choose an option (1, 2, 3, 4): ") 
 
-    if choice not in ("1", "2", "3"): 
+    if choice not in ("1", "2", "3", "4"): 
         print("Invalid choice") 
         return 
         
@@ -28,8 +32,11 @@ def main():
     elif choice == "2":
         result = subtract(num1, num2) 
         print("Result:", result)
-    else: 
+    elif choice == "3":
         result = mult(num1, num2) 
+        print("Result:", result)
+    else: 
+        result = div(num1, num2) 
         print("Result:", result)
 
 if __name__ == "__main__": 
